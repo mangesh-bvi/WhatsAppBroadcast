@@ -97,7 +97,7 @@ namespace WhatsappBroadcastHomeshop
             string apiResponse = string.Empty;
             string additionalInfo = string.Empty;
             string TemplateName = string.Empty;
-
+            MySqlConnection con = null;
             try
             {
                 DataSet ds = new DataSet();
@@ -105,9 +105,11 @@ namespace WhatsappBroadcastHomeshop
                 IConfiguration config = new ConfigurationBuilder().AddJsonFile("appsettings.json", true, true).Build();
                 var constr = config.GetSection("ConnectionStrings").GetSection("HomeShop").Value;
                 string ClientAPIURL = config.GetSection("ConnectionStrings").GetSection("ClientAPIURL").Value;
-                MySqlConnection con = new MySqlConnection(constr);
-                MySqlCommand cmd = new MySqlCommand("SP_HSGetWhatsappBroadcastDetail", con);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                con = new MySqlConnection(constr);
+                MySqlCommand cmd = new MySqlCommand("SP_HSGetWhatsappBroadcastDetail", con)
+                {
+                    CommandType = System.Data.CommandType.StoredProcedure
+                };
                 cmd.Connection.Open();
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 da.Fill(dt);
@@ -149,58 +151,72 @@ namespace WhatsappBroadcastHomeshop
                             apiResponse = CommonService.SendApiRequest(ClientAPIURL + "api/ChatbotBell/SendCampaign", apiReq);
                             if (apiResponse.Equals("true"))
                             {
-                                //UpdateResponseShare(objRequest.CustomerID, "Contacted Via Chatbot");
+                                string Responcetext = "Success";
+                                UpdateResponse(ID, DateTime.Now.ToString(), Responcetext, 1);
+                            }
+                            else
+                            {
+                                string Responcetext = "Fail";
+                                UpdateResponse(ID, DateTime.Now.ToString(), Responcetext, 2);
                             }
                         }
-                        catch (Exception _ex)
+                        catch (Exception ex)
                         {
-
+                            string Responcetext = ex.ToString();
+                            UpdateResponse(ID, DateTime.Now.ToString(), Responcetext, 2);
                         }
                     }
 
                 }
-                
-
+               
             }
             catch (Exception _ex)
-            {
-
-                throw;
+            { 
+               // throw;
             }
             finally
             {
+                if (con != null)
+                {
+                    con.Close();
+                }
                 GC.Collect();
             }
         }
-        public static void UpdateResponse(int ClientID, string Date, string ConString)
+        public static void UpdateResponse(int ID, string Date, string Responcetext, int IsSend)
         {
-
+            MySqlConnection con = null;
             try
             {
                 DataTable dt = new DataTable();
-                MySqlConnection con = new MySqlConnection(ConString);
-                MySqlCommand cmd1 = new MySqlCommand("SP_HSUpdateSMSBroadcastResponce", con);
-                cmd1.Parameters.AddWithValue("@_clientID", ClientID);
-                cmd1.Parameters.AddWithValue("@_date", Date);
-                cmd1.Connection.Open();
-                cmd1.CommandType = CommandType.StoredProcedure;
-                cmd1.ExecuteNonQuery();
-                cmd1.Connection.Close();
+                IConfiguration config = new ConfigurationBuilder().AddJsonFile("appsettings.json", true, true).Build();
+                var constr = config.GetSection("ConnectionStrings").GetSection("HomeShop").Value;
+                con = new MySqlConnection(constr);
+                MySqlCommand cmd = new MySqlCommand("SP_HSUpdateBroadcastResponce", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                cmd.Parameters.AddWithValue("@_iD", ID);
+                cmd.Parameters.AddWithValue("@_date", Date);
+                cmd.Parameters.AddWithValue("@_responcetext", Responcetext);
+                cmd.Parameters.AddWithValue("@_isSend", IsSend);
+                cmd.Connection.Open();
+                cmd.ExecuteNonQuery();
+                cmd.Connection.Close();
             }
-            catch (Exception ex)
+            catch
             {
-                throw;
+
             }
             finally
             {
+                if (con != null)
+                {
+                    con.Close();
+                }
                 GC.Collect();
             }
 
         }
-
-
-
-
-
     }
 }
