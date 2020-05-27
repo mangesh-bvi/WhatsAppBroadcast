@@ -1,0 +1,24 @@
+D:\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\bin\Debug\netcoreapp2.2\WhatsappBroadcastHomeshop.deps.json
+D:\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\bin\Debug\netcoreapp2.2\WhatsappBroadcastHomeshop.runtimeconfig.json
+D:\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\bin\Debug\netcoreapp2.2\WhatsappBroadcastHomeshop.runtimeconfig.dev.json
+D:\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\bin\Debug\netcoreapp2.2\WhatsappBroadcastHomeshop.dll
+D:\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\obj\Debug\netcoreapp2.2\WhatsappBroadcastHomeshop.csprojAssemblyReference.cache
+D:\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\obj\Debug\netcoreapp2.2\WhatsappBroadcastHomeshop.csproj.CoreCompileInputs.cache
+D:\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\obj\Debug\netcoreapp2.2\WhatsappBroadcastHomeshop.AssemblyInfoInputs.cache
+D:\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\obj\Debug\netcoreapp2.2\WhatsappBroadcastHomeshop.AssemblyInfo.cs
+D:\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\bin\Debug\netcoreapp2.2\whatsapp_brodcastHomeshop.json
+D:\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\bin\Debug\netcoreapp2.2\WhatsappBroadcastHomeshop.pdb
+D:\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\obj\Debug\netcoreapp2.2\WhatsappBroadcastHomeshop.dll
+D:\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\obj\Debug\netcoreapp2.2\WhatsappBroadcastHomeshop.pdb
+D:\Devesh\Devesh\Ticketing\DotNetCore Console\Home shop Console\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\bin\Debug\netcoreapp2.2\appsettings.json
+D:\Devesh\Devesh\Ticketing\DotNetCore Console\Home shop Console\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\bin\Debug\netcoreapp2.2\WhatsappBroadcastHomeshop.deps.json
+D:\Devesh\Devesh\Ticketing\DotNetCore Console\Home shop Console\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\bin\Debug\netcoreapp2.2\WhatsappBroadcastHomeshop.runtimeconfig.json
+D:\Devesh\Devesh\Ticketing\DotNetCore Console\Home shop Console\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\bin\Debug\netcoreapp2.2\WhatsappBroadcastHomeshop.runtimeconfig.dev.json
+D:\Devesh\Devesh\Ticketing\DotNetCore Console\Home shop Console\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\bin\Debug\netcoreapp2.2\WhatsappBroadcastHomeshop.dll
+D:\Devesh\Devesh\Ticketing\DotNetCore Console\Home shop Console\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\bin\Debug\netcoreapp2.2\WhatsappBroadcastHomeshop.pdb
+D:\Devesh\Devesh\Ticketing\DotNetCore Console\Home shop Console\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\obj\Debug\netcoreapp2.2\WhatsappBroadcastHomeshop.csprojAssemblyReference.cache
+D:\Devesh\Devesh\Ticketing\DotNetCore Console\Home shop Console\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\obj\Debug\netcoreapp2.2\WhatsappBroadcastHomeshop.csproj.CoreCompileInputs.cache
+D:\Devesh\Devesh\Ticketing\DotNetCore Console\Home shop Console\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\obj\Debug\netcoreapp2.2\WhatsappBroadcastHomeshop.AssemblyInfoInputs.cache
+D:\Devesh\Devesh\Ticketing\DotNetCore Console\Home shop Console\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\obj\Debug\netcoreapp2.2\WhatsappBroadcastHomeshop.AssemblyInfo.cs
+D:\Devesh\Devesh\Ticketing\DotNetCore Console\Home shop Console\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\obj\Debug\netcoreapp2.2\WhatsappBroadcastHomeshop.dll
+D:\Devesh\Devesh\Ticketing\DotNetCore Console\Home shop Console\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\WhatsappBroadcastHomeshop\obj\Debug\netcoreapp2.2\WhatsappBroadcastHomeshop.pdb
