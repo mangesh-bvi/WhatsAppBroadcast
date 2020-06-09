@@ -149,10 +149,11 @@ namespace WhatsappBroadcastHomeshop
 
                             string apiReq = JsonConvert.SerializeObject(sendFreeTextRequest);
                             apiResponse = CommonService.SendApiRequest(ClientAPIURL + "api/ChatbotBell/SendCampaign", apiReq);
+                            Thread.Sleep(30000);
                             if (apiResponse.Equals("true"))
                             {
                                 string Responcetext = "Success";
-                                UpdateResponse(ID, DateTime.Now.ToString(), Responcetext, 1);
+                                UpdateResponse(ID, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), Responcetext, 1);
                             }
                             else
                             {
@@ -204,9 +205,9 @@ namespace WhatsappBroadcastHomeshop
                 cmd.ExecuteNonQuery();
                 cmd.Connection.Close();
             }
-            catch
+            catch (Exception ex)
             {
-
+                
             }
             finally
             {
