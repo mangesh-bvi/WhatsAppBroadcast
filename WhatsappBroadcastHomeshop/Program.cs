@@ -114,8 +114,8 @@ namespace WhatsappBroadcastHomeshop
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 da.Fill(dt);
                 cmd.Connection.Close();
-                var result = dt.Rows.Count;
-                for (int i = 0; i < result; i++)
+               
+                for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     DataRow dr = dt.Rows[i];
                     ID = Convert.ToInt32(dr["ID"]);
