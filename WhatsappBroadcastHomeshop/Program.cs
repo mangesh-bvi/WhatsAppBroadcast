@@ -171,9 +171,9 @@ namespace WhatsappBroadcastHomeshop
                 }
                
             }
-            catch (Exception _ex)
+            catch
             { 
-               // throw;
+               
             }
             finally
             {
@@ -205,7 +205,7 @@ namespace WhatsappBroadcastHomeshop
                 cmd.ExecuteNonQuery();
                 cmd.Connection.Close();
             }
-            catch (Exception ex)
+            catch 
             {
                 
             }

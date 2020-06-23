@@ -30,9 +30,9 @@ namespace WhatsappBroadcastHomeshop
                     strresponse = streamReader.ReadToEnd();
                 }
             }
-            catch (Exception ex)
+            catch 
             {
-                throw;
+                
             }
 
             return strresponse;
