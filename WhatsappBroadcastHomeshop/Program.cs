@@ -22,67 +22,15 @@ namespace WhatsappBroadcastHomeshop
             _Individualprocessthread.Start();
         }
 
-
-
         public static void InvokeMethod()
         {
             while (true)
             {
-                //GetConnectionStrings();
                 GetdataFromMySQL();
                 Thread.Sleep(delaytime);
             }
         }
 
-        //public static void GetConnectionStrings()
-        //{
-        //    string ServerName = string.Empty;
-        //    string ServerCredentailsUsername = string.Empty;
-        //    string ServerCredentailsPassword = string.Empty;
-        //    string DBConnection = string.Empty;
-        //    string ProgramCode = string.Empty;
-
-        //    try
-        //    {
-        //        DataTable dt = new DataTable();
-        //        IConfiguration config = new ConfigurationBuilder().AddJsonFile("appsettings.json", true, true).Build();
-        //        var constr = config.GetSection("ConnectionStrings").GetSection("HomeShop").Value;
-        //        MySqlConnection con = new MySqlConnection(constr);
-        //        MySqlCommand cmd = new MySqlCommand("SP_HSGetAllConnectionstrings", con);
-        //        cmd.CommandType = System.Data.CommandType.StoredProcedure;
-        //        cmd.Connection.Open();
-        //        MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-        //        da.Fill(dt);
-        //        cmd.Connection.Close();
-        //        var result = dt.Rows.Count;
-        //        for (int i = 0; i < result; i++)
-        //        {
-        //            DataRow dr = dt.Rows[i];
-        //            ServerName = Convert.ToString(dr["ServerName"]);
-        //            ServerCredentailsUsername = Convert.ToString(dr["ServerCredentailsUsername"]);
-        //            ServerCredentailsPassword = Convert.ToString(dr["ServerCredentailsPassword"]);
-        //            DBConnection = Convert.ToString(dr["DBConnection"]);
-        //            ProgramCode = Convert.ToString(dr["ProgramCode"]);
-
-        //            string ConString = "Data Source = " + ServerName + " ; port = " + 3306 + "; Initial Catalog = " + DBConnection + " ; User Id = " + ServerCredentailsUsername + "; password = " + ServerCredentailsPassword + "";
-        //              GetdataFromMySQL(ConString, ProgramCode);
-        //        }
-
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-
-
-        //    }
-        //    finally
-        //    {
-
-        //        GC.Collect();
-        //    }
-
-            
-        //}
         public static void GetdataFromMySQL()
         {
             var Programcode = string.Empty;
