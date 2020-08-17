@@ -3,6 +3,7 @@ using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Data;
 using System.Linq;
 using System.Threading;
@@ -102,6 +103,8 @@ namespace WhatsappBroadcastHomeshop
                             {
                                 string Responcetext = "Success";
                                 UpdateResponse(ID, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), Responcetext, 1);
+                                string bellMobileNumber = MobileNumber.TrimStart('0').Length > 10 ? MobileNumber : "91" + MobileNumber.TrimStart('0');
+                                MakeBellActive(bellMobileNumber, Programcode, ClientAPIURL);
                             }
                             else
                             {
@@ -166,6 +169,32 @@ namespace WhatsappBroadcastHomeshop
                 GC.Collect();
             }
 
+        }
+
+
+        /// <summary>
+        /// MakeBellActive
+        /// </summary>
+        /// <param name="Mobilenumber"></param>
+        /// <param name="ProgramCode"></param>
+        /// <param name="ClientAPIURL"></param>
+        /// <param name="TenantID"></param>
+        /// <param name="UserID"></param>
+        public static void MakeBellActive(string Mobilenumber, string ProgramCode, string ClientAPIURL)
+        {
+            try
+            {
+                NameValueCollection Params = new NameValueCollection
+                {
+                    { "Mobilenumber", Mobilenumber },
+                    { "ProgramCode", ProgramCode }
+                };
+                string apiResponsechatbotBellMakeBellActive = CommonService.SendParamsApiRequest(ClientAPIURL + "api/ChatbotBell/MakeBellActive", Params);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }
